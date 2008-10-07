@@ -1,5 +1,5 @@
-class MessagesController < ApplicationController
-  before_filter :auth
+class Messages < Application
+  before :auth
   
   def index
     @messages = Message.fetch(@username, @password)

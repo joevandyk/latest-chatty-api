@@ -1,4 +1,4 @@
-class CreateController < ApplicationController
+class Create < Application
   
   def index
     login_url = "http://www.shacknews.com/login_laryn.x"

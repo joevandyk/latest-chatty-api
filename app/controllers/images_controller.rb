@@ -1,6 +1,6 @@
 require 'base64'
 
-class ImagesController < ApplicationController
+class Images < Application
   
   def create
     cookie = LoginCookie::ShackPics.new(params[:username], params[:password])

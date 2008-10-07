@@ -1,12 +1,9 @@
-class ParseController < ApplicationController
-  # def full
-  #   @feed = Feed.new(:story_id => params[:id])
-  #   render :action => 'index'
-  # end
-  
+class Parse < Application
+  provides :xml, :json
   def index
     Feed.work_safe = request.subdomains.include?('ws')
     @feed = Feed.new(:story_id => params[:id], :page => params[:page], :parse_children => false)
+    render 
   end
   
   def thread
